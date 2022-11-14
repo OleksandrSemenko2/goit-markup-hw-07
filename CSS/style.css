@@ -61,7 +61,7 @@ header {
 .logo:hover {
   color: var(--brand-color-black);
 }
-.logo-web {
+.logo__text {
   color: var(--brand-color-blue);
 }
 .logo-bot {
@@ -73,7 +73,7 @@ header {
   margin-bottom: 20px;
 }
 
-.container-head {
+.container__header {
   display: flex;
 }
 .nav {
@@ -81,7 +81,7 @@ header {
   display: flex;
 }
 
-.nav-link {
+.site-nav__link {
   position: relative;
   color: var(--brand-color-black);
   text-decoration: none;
@@ -96,15 +96,15 @@ header {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav-link:focus,
-.nav-link:hover {
+.site-nav__link:focus,
+.site-nav__link:hover {
   color: var(--brand-color-blue);
 }
-.nav-link.current {
+.site-nav__link.site-nav__link--current {
   color: var(--brand-color-blue);
 }
 
-.nav-link.current::after {
+.site-nav__link.site-nav__link--current::after {
   position: absolute;
   margin: 0 auto;
   bottom: 0;
@@ -121,7 +121,7 @@ header {
   margin-left: 93px;
   align-items: center;
 }
-.site-nav-link:nth-last-child(-n + 2) {
+.site-nav__item:nth-last-child(-n + 2) {
   margin-left: 50px;
 }
 
@@ -133,24 +133,24 @@ header {
   color: var(--brand-color-gray);
 }
 
-.contact-item:hover .contact-icon {
+.contact__item:hover .contact__icon {
   fill: var(--brand-color-blue);
 }
-.contact:focus .contact-icon {
+.contact:focus .contact__icon {
   fill: var(--brand-color-blue);
 }
 
-.contact-item {
+.contact__item {
   display: flex;
   align-items: center;
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.contact-item:last-child {
+.contact__item:last-child {
   margin-left: 50px;
 }
-.contact-icon {
+.contact__icon {
   fill: var(--brand-color-gray);
   margin-right: 10px;
   transition-property: fill;
@@ -170,7 +170,7 @@ header {
   clip-path: inset(50%);
   margin: -1px;
 }
-.hat {
+.hero {
   background-color: var(--brand-background-black);
   padding: 200px 0;
   max-width: 1600px;
@@ -184,12 +184,12 @@ header {
   background-position: center;
   margin: auto;
 }
-.hat-container {
+.hero__container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.hat-header {
+.hero__header {
   color: var(--brand-color-white);
   font-size: 44px;
   text-transform: uppercase;
@@ -260,7 +260,7 @@ header {
   transform: translate(-50%, -50%);
   padding: 40px;
 }
-.modal-close {
+.close__button {
   position: absolute;
   display: flex;
   align-items: center;
@@ -274,18 +274,18 @@ header {
   border-radius: 50%;
   cursor: pointer;
 }
-.modal-close-icon:hover {
+.close__icon:hover {
   fill: var(--brand-color-blue);
 }
-.modal-inputs-container {
+.modal-inputs--container {
 }
-.modal-form {
+.modal--form {
   display: flex;
   flex-direction: column;
 
   align-items: center;
 }
-.modal-legend {
+.modal--legend {
   text-align: center;
   margin-bottom: 12px;
   font-weight: 700;
@@ -293,7 +293,7 @@ header {
   line-height: 1.172;
   letter-spacing: 0.03em;
 }
-.modal-fieldset {
+.modal--fieldset {
   margin: 0;
   padding: 0;
   display: flex;
@@ -301,14 +301,14 @@ header {
   border: none;
   margin-bottom: 20px;
 }
-.modal-fieldset > label {
+.modal--fieldset > label {
   color: var(--brand-color-gray);
   font-size: 12px;
   line-height: 14px;
   letter-spacing: 0.01em;
   margin-bottom: 4px;
 }
-.input-modal {
+.modal--input {
   display: block;
   height: 100%;
   width: 100%;
@@ -319,41 +319,38 @@ header {
   padding-left: 42px;
   color: var(--brand-color-blue);
 }
-.input-modal:focus {
+.modal--input:focus {
   border-color: var(--brand-color-blue);
 }
 
-.modal-textarea {
+.modal--textarea {
   padding: 11px 16px;
 }
-.input-box {
+.modal--input-box {
   position: relative;
   height: 40px;
   margin-bottom: 10px;
 }
-.modal-icon {
+.modal--icon {
   position: absolute;
   left: 12px;
   top: 50%;
   transform: translateY(-50%);
   fill: var(--brand-color-black);
 }
-.input-modal:focus + .modal-icon {
+.modal--input:focus + .modal--icon {
   fill: var(--brand-color-blue);
 }
-
-#modal-name-input {
-}
-.modal-textarea {
+.modal--textarea {
   resize: none;
 }
-.modal-textarea::placeholder {
+.modal--textarea::placeholder {
   color: var(--brand-placeholder-gray);
 }
 .modal-check {
   padding-left: 1.2em;
 }
-.modal-check-input {
+.checkbox--input {
   position: absolute;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -366,7 +363,7 @@ header {
   height: 15px;
   background-image: url(../images/off.svg);
 }
-.modal-check-input:checked + .modal-check-box {
+.checkbox--input:checked + .modal-check-box {
   background-image: url(../images/on.svg);
 }
 .modal-check-text {
